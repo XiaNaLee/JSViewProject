@@ -22,11 +22,12 @@ public class Main2Activity extends Activity {
 
 
         final V8 v8 = J2V8Core.getRuntime();
-        LinearLayout root = findViewById(R.id.layout);
+        LinearLayout root =(LinearLayout) findViewById(R.id.layout);
         mWindowV8Obj = new WindowJsObj(v8, root);
         v8.add("window", mWindowV8Obj.getObject());
         J2V8Core.run(this, "test.js");
 
+        root.addView(mWindowV8Obj.getRootView());
 
         startTime = System.currentTimeMillis();
 
@@ -43,8 +44,11 @@ public class Main2Activity extends Activity {
             }
         });
 
-
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        J2V8Core.clean(mWindowV8Obj);
+    }
 }

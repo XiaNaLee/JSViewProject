@@ -1,4 +1,4 @@
-package com.iqyi.paopao.jsviewsdk;
+package com.iqyi.paopao.jsviewsdk.util;
 
 import android.content.Context;
 

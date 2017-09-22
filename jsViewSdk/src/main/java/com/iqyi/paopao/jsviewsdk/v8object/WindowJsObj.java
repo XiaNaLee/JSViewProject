@@ -1,6 +1,8 @@
 package com.iqyi.paopao.jsviewsdk.v8object;
 
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.eclipsesource.v8.V8;
 import com.eclipsesource.v8.V8Object;
@@ -12,17 +14,18 @@ import java.util.List;
 /**
  * Created by LiYong on 2017/9/20.
  * Email:liyong@qiyi.com/lee131483@gmail.com
- * Version:
  */
 
 public class WindowJsObj extends BaseJsObject {
 
-    private ViewGroup mViewGroup;
-    List<BaseJsObject> mV8Objects = new ArrayList<>();
+    private ViewGroup mAttachViewGroup;
+    private List<BaseJsObject> mV8Objects = new ArrayList<>();
+    private LinearLayout mRootLayout;
 
     public WindowJsObj(V8 v8Runtime, ViewGroup viewGroup) {
         super(v8Runtime);
-        mViewGroup = viewGroup;
+        mAttachViewGroup = viewGroup;
+        mRootLayout = new LinearLayout(viewGroup.getContext());
     }
 
     @Override
@@ -38,27 +41,36 @@ public class WindowJsObj extends BaseJsObject {
         mObject = new V8Object(mRuntime);
         mObject.registerJavaMethod(this, "createButton", "createButton", null);
         mObject.registerJavaMethod(this, "createTextView", "createTextView", null);
+        mObject.registerJavaMethod(this, "createLLayout", "createLLayout", null);
+        mObject.registerJavaMethod(this, "createRLayout", "createRLayout", null);
 
     }
 
     public V8Object createButton() {
-        ButtonJsObj buttonV8Object = new ButtonJsObj(mRuntime, mViewGroup);
+        ButtonJsObj buttonV8Object = new ButtonJsObj(mRuntime, mRootLayout);
         mV8Objects.add(buttonV8Object);
         return buttonV8Object.getObject();
     }
 
     public V8Object createTextView() {
-        TextViewJsObj textViewJsObj = new TextViewJsObj(mRuntime, mViewGroup);
+        TextViewJsObj textViewJsObj = new TextViewJsObj(mRuntime, mRootLayout);
         mV8Objects.add(textViewJsObj);
         return textViewJsObj.getObject();
     }
 
-    public BaseJsObject contain(V8Object v8Object) {
-        for (BaseJsObject object : mV8Objects) {
-            if (object.getObject() == v8Object) {
-                return object;
-            }
-        }
-        return null;
+    public V8Object createLLayout() {
+        LinearLayoutJsObj linearLayoutJsObj = new LinearLayoutJsObj(mRuntime, mRootLayout);
+        mV8Objects.add(linearLayoutJsObj);
+        return linearLayoutJsObj.getObject();
+    }
+
+    public V8Object createRLayout() {
+        RelativeLayoutJsObj relativeLayoutJsObj = new RelativeLayoutJsObj(mRuntime, mRootLayout);
+        mV8Objects.add(relativeLayoutJsObj);
+        return relativeLayoutJsObj.getObject();
+    }
+
+    public View getRootView() {
+        return mRootLayout;
     }
 }
