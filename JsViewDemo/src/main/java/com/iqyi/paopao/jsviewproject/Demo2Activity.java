@@ -2,24 +2,20 @@ package com.iqyi.paopao.jsviewproject;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.LinearLayout;
 
 import com.eclipsesource.v8.V8;
-import com.eclipsesource.v8.V8Array;
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.iqyi.paopao.jsviewsdk.core.J2V8Core;
 import com.iqyi.paopao.jsviewsdk.v8object.WindowJsObj;
 
 
-public class Main2Activity extends Activity {
+public class Demo2Activity extends Activity {
     private WindowJsObj mWindowV8Obj;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
-        Fresco.initialize(this);
+        setContentView(R.layout.activity_demo2);
 
         final V8 v8 = J2V8Core.getRuntime();
         LinearLayout root =(LinearLayout) findViewById(R.id.layout);
@@ -28,17 +24,6 @@ public class Main2Activity extends Activity {
         J2V8Core.run(this, "test.js");
 
         root.addView(mWindowV8Obj.getRootView());
-
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                V8Array parameters = new V8Array(v8);
-                parameters.push("John");
-                parameters.push("Smith");
-                v8.executeVoidFunction("setData", parameters);
-                parameters.release();
-            }
-        });
 
     }
 
