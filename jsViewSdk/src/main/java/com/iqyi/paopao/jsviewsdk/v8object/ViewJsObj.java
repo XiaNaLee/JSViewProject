@@ -65,7 +65,6 @@ public abstract class ViewJsObj<U extends View> extends BaseJsViewObject<U> impl
         mObject.registerJavaMethod(this, "addRule", "addRule", new Class[]{int.class});
         mObject.registerJavaMethod(this, "setBgColor", "setBgColor", new Class[]{String.class});
 
-
     }
 
     @Override

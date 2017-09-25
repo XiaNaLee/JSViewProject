@@ -7,19 +7,19 @@ import android.widget.LinearLayout;
 
 import com.eclipsesource.v8.V8;
 import com.eclipsesource.v8.V8Array;
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.iqyi.paopao.jsviewsdk.core.J2V8Core;
 import com.iqyi.paopao.jsviewsdk.v8object.WindowJsObj;
 
 
 public class Main2Activity extends Activity {
-    long startTime;
     private WindowJsObj mWindowV8Obj;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-
+        Fresco.initialize(this);
 
         final V8 v8 = J2V8Core.getRuntime();
         LinearLayout root =(LinearLayout) findViewById(R.id.layout);
@@ -29,9 +29,6 @@ public class Main2Activity extends Activity {
 
         root.addView(mWindowV8Obj.getRootView());
 
-        startTime = System.currentTimeMillis();
-
-
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,7 +36,6 @@ public class Main2Activity extends Activity {
                 parameters.push("John");
                 parameters.push("Smith");
                 v8.executeVoidFunction("setData", parameters);
-
                 parameters.release();
             }
         });

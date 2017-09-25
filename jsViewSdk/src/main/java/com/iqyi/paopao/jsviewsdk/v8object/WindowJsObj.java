@@ -26,6 +26,9 @@ public class WindowJsObj extends BaseJsObject {
         super(v8Runtime);
         mAttachViewGroup = viewGroup;
         mRootLayout = new LinearLayout(viewGroup.getContext());
+        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        mRootLayout.setLayoutParams(params);
     }
 
     @Override
@@ -43,7 +46,7 @@ public class WindowJsObj extends BaseJsObject {
         mObject.registerJavaMethod(this, "createTextView", "createTextView", null);
         mObject.registerJavaMethod(this, "createLLayout", "createLLayout", null);
         mObject.registerJavaMethod(this, "createRLayout", "createRLayout", null);
-
+        mObject.registerJavaMethod(this, "createImageView", "createImageView", null);
     }
 
     public V8Object createButton() {
@@ -66,6 +69,12 @@ public class WindowJsObj extends BaseJsObject {
 
     public V8Object createRLayout() {
         RelativeLayoutJsObj relativeLayoutJsObj = new RelativeLayoutJsObj(mRuntime, mRootLayout);
+        mV8Objects.add(relativeLayoutJsObj);
+        return relativeLayoutJsObj.getObject();
+    }
+
+    public V8Object createImageView() {
+        ImageViewJsObj relativeLayoutJsObj = new ImageViewJsObj(mRuntime, mRootLayout);
         mV8Objects.add(relativeLayoutJsObj);
         return relativeLayoutJsObj.getObject();
     }

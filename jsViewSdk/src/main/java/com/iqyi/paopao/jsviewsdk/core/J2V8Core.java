@@ -41,6 +41,8 @@ public class J2V8Core {
         mRuntime.add("ALIGN_PARENT_LEFT",LayoutConstant.ALIGN_PARENT_LEFT);
         mRuntime.add("RIGHT_OF",LayoutConstant.RIGHT_OF);
         mRuntime.add("LEFT_OF",LayoutConstant.LEFT_OF);
+        mRuntime.add("BELOW",LayoutConstant.BELOW);
+
 
         return mRuntime;
     }

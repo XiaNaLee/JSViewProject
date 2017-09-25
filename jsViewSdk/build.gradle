@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "25.0.0"
 
     defaultConfig {
         minSdkVersion 14
@@ -22,5 +22,7 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile(name:'j2v8_android-3.0.5', ext:'aar')
+    compile(name: 'j2v8_android-3.0.5', ext: 'aar')
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.facebook.fresco:fresco:1.5.0'
 }
