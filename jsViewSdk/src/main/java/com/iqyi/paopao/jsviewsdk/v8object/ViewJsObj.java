@@ -24,11 +24,11 @@ public abstract class ViewJsObj<U extends View> extends BaseJsViewObject<U> impl
 
     protected ViewGroup mViewGroup;
 
-    public ViewJsObj(V8 v8Runtime, ViewGroup viewGroup) {
-        super(v8Runtime, viewGroup.getContext());
+    public ViewJsObj(V8 v8Runtime, ViewGroup viewGroup,U view) {
+        super(v8Runtime, viewGroup.getContext(),view);
         mViewGroup = viewGroup;
 
-        view.setOnClickListener(new View.OnClickListener() {
+        this.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (mOnClickFName != null) {

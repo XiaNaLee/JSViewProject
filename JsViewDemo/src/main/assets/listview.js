@@ -1,10 +1,10 @@
 //声明控件
-var button = window.createButton("")
-var textView1 = window.createTextView("")
-var textView2 = window.createTextView("")
-var linearLayout = window.createLLayout("")
-var relativeLayout = window.createRLayout("")
-var imageView = window.createImageView("")
+var button = window.createButton("button")
+var textView1 = window.createTextView("textView1")
+var textView2 = window.createTextView("textView2")
+var linearLayout = window.createLLayout("linearLayout")
+var relativeLayout = window.createRLayout("relativeLayout")
+var imageView = window.createImageView("imageView")
 
 relativeLayout.setSize(MATCH_PARENT,WRAP_CONTENT)
 relativeLayout.setBgColor("#FF4040")
@@ -43,26 +43,12 @@ relativeLayout.addView(button.getViewId())
 relativeLayout.generateView()
 
 
-
-
-// linearLayout.setSize(MATCH_PARENT,200)
-// linearLayout.setBgColor("#FF4040")
-// //generateView这个方法被调用会将button添加到ViewGroup上展示出来(手机界面能看到)，不添加就不会展示
-// linearLayout.generateView()
-
-
-// var buttonId = button.getViewId();
-// button.setText("button")
-
-// //button的点击事件
-// linearLayout.addView(buttonId);
-
-
 var hockeyTeam = {
      setData : function(url,pos) {
-                  imageView.setUrl(url)
-                  textView1.setText(pos)
-                  return 1;
+     var tv1 = window.findTextViewByTag("textView1")
+     var iv = window.findImageViewByTag("imageView")
+                  iv.setUrl(url)
+                  tv1.setText(pos)
          }
 }
 

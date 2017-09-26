@@ -13,7 +13,7 @@ import com.eclipsesource.v8.V8;
 public class ButtonJsObj extends ViewJsObj<Button> {
 
     public ButtonJsObj(V8 v8Runtime, ViewGroup viewGroup) {
-        super(v8Runtime, viewGroup);
+        super(v8Runtime, viewGroup, null);
     }
 
     @Override
@@ -24,7 +24,7 @@ public class ButtonJsObj extends ViewJsObj<Button> {
 
     @Override
     public Button getView() {
-        return new Button(mContext);
+        return view != null ? view : new Button(mContext);
     }
 
     public void setText(String text) {

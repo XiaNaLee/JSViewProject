@@ -14,7 +14,7 @@ import com.iqyi.paopao.jsviewsdk.core.J2V8Core;
 public class RelativeLayoutJsObj extends ViewJsObj<RelativeLayout> {
 
     public RelativeLayoutJsObj(V8 v8Runtime, ViewGroup viewGroup) {
-        super(v8Runtime, viewGroup);
+        super(v8Runtime, viewGroup,null);
     }
 
     @Override

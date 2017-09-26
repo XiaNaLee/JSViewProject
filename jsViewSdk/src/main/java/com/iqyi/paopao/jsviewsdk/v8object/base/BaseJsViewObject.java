@@ -19,13 +19,17 @@ public abstract class BaseJsViewObject<T extends View> extends BaseJsObject {
     protected GeneralViewListener mGeneralViewHelper;
     protected String mOnClickFName;
 
-    public BaseJsViewObject(V8 v8Runtime, Context context) {
+    public BaseJsViewObject(V8 v8Runtime, Context context, T view) {
         super(v8Runtime);
         mContext = context;
-        view = getView();
-        ViewUtil.setId(view);
-        J2V8Core.addViewByViewId(view.getId(),view);
-        mGeneralViewHelper = new GeneralViewHelper(view);
+        if (view != null) {
+            this.view = view;
+        } else {
+            this.view = getView();
+            ViewUtil.setId(this.view);
+            J2V8Core.addViewByViewId(this.view.getId(), this.view);
+        }
+        mGeneralViewHelper = new GeneralViewHelper(this.view);
     }
 
     public abstract T getView();

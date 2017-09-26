@@ -2,7 +2,6 @@ package com.iqyi.paopao.jsviewproject;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -10,6 +9,7 @@ import android.widget.ListView;
 
 import com.eclipsesource.v8.V8;
 import com.eclipsesource.v8.V8Array;
+import com.eclipsesource.v8.V8Object;
 import com.iqyi.paopao.jsviewsdk.core.J2V8Core;
 import com.iqyi.paopao.jsviewsdk.v8object.WindowJsObj;
 
@@ -100,14 +100,12 @@ public class Demo4Activity extends Activity {
     }
 
     private List<WindowJsObj> mWindowJsObjs = new ArrayList<>();
+    private List<V8Object> mV8Objects = new ArrayList<>();
 
 
     private class CustomAdapter extends BaseAdapter {
 
-        private LayoutInflater ml;
-
         public CustomAdapter() {
-            ml = LayoutInflater.from(Demo4Activity.this);
         }
 
         @Override
@@ -129,20 +127,32 @@ public class Demo4Activity extends Activity {
         public View getView(int position, View convertView, ViewGroup parent) {
 
             if (convertView == null) {
-                WindowJsObj mWindowV8Obj = new WindowJsObj(mV8, parent);
-                mWindowJsObjs.add(mWindowV8Obj);
-                mV8.add("window", mWindowV8Obj.getObject());
-                J2V8Core.run(parent.getContext(), "test.js");
-                convertView = mWindowV8Obj.getRootView();
+                WindowJsObj windowV8Obj = new WindowJsObj(mV8, parent);
+                mWindowJsObjs.add(windowV8Obj);
+                mV8.add("window", windowV8Obj.getObject());
+                mV8.add("position", position);
 
-                convertView.setTag(mWindowV8Obj);
+                J2V8Core.run(parent.getContext(), "listview.js");
+                convertView = windowV8Obj.getRootView();
+                convertView.setTag(windowV8Obj);
+
+                V8Object hockeyTeam = mV8.getObject("hockeyTeam");
+                mV8Objects.add(hockeyTeam);
+                convertView.setTag(R.id.item, hockeyTeam);
+                convertView.setTag(R.id.position, position);
+
+            } else {
+                WindowJsObj windowV8Obj = (WindowJsObj) convertView.getTag();
+                int pos = (int) convertView.getTag(R.id.position);
+                mV8.add("window", windowV8Obj.getObject());
+                mV8.add("position", pos);
             }
 
-            WindowJsObj windowJsObj = (WindowJsObj) convertView.getTag();
 
-            V8Array parameters = new V8Array(mV8);
-            parameters.push(datas.get(position));
-            mV8.executeVoidFunction("setData", parameters);
+            V8Object hockeyTeam = (V8Object) convertView.getTag(R.id.item);
+            V8Array parameters = new V8Array(mV8).push(datas.get(position)).push(
+                    String.valueOf(position));
+            hockeyTeam.executeVoidFunction("setData", parameters);
             parameters.release();
             return convertView;
         }
@@ -154,6 +164,9 @@ public class Demo4Activity extends Activity {
         super.onDestroy();
         for (WindowJsObj w : mWindowJsObjs) {
             w.clean();
+        }
+        for (V8Object v8Object : mV8Objects) {
+            v8Object.release();
         }
         mV8.release();
     }

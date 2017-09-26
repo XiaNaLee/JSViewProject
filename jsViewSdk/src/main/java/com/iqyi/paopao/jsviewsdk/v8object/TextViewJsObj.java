@@ -16,7 +16,11 @@ import com.eclipsesource.v8.V8;
 public class TextViewJsObj extends ViewJsObj<TextView> {
 
     public TextViewJsObj(V8 v8Runtime, ViewGroup viewGroup) {
-        super(v8Runtime, viewGroup);
+        super(v8Runtime, viewGroup, null);
+    }
+
+    public TextViewJsObj(V8 v8Runtime, ViewGroup viewGroup, TextView view) {
+        super(v8Runtime, viewGroup, view);
     }
 
     @Override
@@ -29,7 +33,7 @@ public class TextViewJsObj extends ViewJsObj<TextView> {
 
     @Override
     public TextView getView() {
-        return new TextView(mContext);
+        return view != null ? view : new TextView(mContext);
     }
 
     public void setText(String text) {

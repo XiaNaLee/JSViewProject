@@ -16,7 +16,11 @@ import com.facebook.drawee.view.SimpleDraweeView;
 public class ImageViewJsObj extends ViewJsObj<SimpleDraweeView> {
 
     public ImageViewJsObj(V8 v8Runtime, ViewGroup viewGroup) {
-        super(v8Runtime, viewGroup);
+        super(v8Runtime, viewGroup, null);
+    }
+
+    public ImageViewJsObj(V8 v8Runtime, ViewGroup viewGroup, SimpleDraweeView imageView) {
+        super(v8Runtime, viewGroup, imageView);
     }
 
     @Override
@@ -29,7 +33,7 @@ public class ImageViewJsObj extends ViewJsObj<SimpleDraweeView> {
 
     @Override
     public SimpleDraweeView getView() {
-        return new SimpleDraweeView(mContext);
+        return view != null ? view : new SimpleDraweeView(mContext);
     }
 
     public void setUrl(String url) {

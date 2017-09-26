@@ -14,7 +14,7 @@ import com.iqyi.paopao.jsviewsdk.core.J2V8Core;
 public class LinearLayoutJsObj extends ViewJsObj<LinearLayout> {
 
     public LinearLayoutJsObj(V8 v8Runtime, ViewGroup viewGroup) {
-        super(v8Runtime, viewGroup);
+        super(v8Runtime, viewGroup, null);
     }
 
     @Override
