@@ -7,10 +7,10 @@ var relativeLayout = window.createRLayout("")
 var imageView = window.createImageView("")
 
 relativeLayout.setSize(MATCH_PARENT,WRAP_CONTENT)
-relativeLayout.setBgColor("#FF4040")
 
 imageView.setSize(100,100)
 imageView.setRoundedCorners(true)
+imageView.setUrl("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506319612933&di=ab5bf4792e57c6935beff7e5b7218598&imgtype=0&src=http%3A%2F%2Fimage.tianjimedia.com%2FuploadImages%2F2017%2F011%2F43%2FT2BQI68W995R.jpg")
 relativeLayout.addView(imageView.getViewId())
 
 

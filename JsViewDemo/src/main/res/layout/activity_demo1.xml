@@ -12,7 +12,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="#FF4040"
         >
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/sd"

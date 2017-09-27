@@ -7,7 +7,6 @@ var relativeLayout = window.createRLayout("relativeLayout")
 var imageView = window.createImageView("imageView")
 
 relativeLayout.setSize(MATCH_PARENT,WRAP_CONTENT)
-relativeLayout.setBgColor("#FF4040")
 
 imageView.setSize(100,100)
 imageView.setRoundedCorners(true)
