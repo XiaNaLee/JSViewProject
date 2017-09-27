@@ -14,6 +14,7 @@ public class Demo1Activity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_demo1);
+        setTitle("纯粹native view");
 
 
         SimpleDraweeView simpleDraweeView = (SimpleDraweeView) findViewById(R.id.sd);

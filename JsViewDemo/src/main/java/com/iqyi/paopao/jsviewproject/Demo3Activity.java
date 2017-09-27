@@ -24,6 +24,8 @@ public class Demo3Activity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_demo3);
+        setTitle("列表native view");
+
 
         datas = new ArrayList<>();
         datas.add("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=733226887,3131487055&fm=11&gp=0.jpg");

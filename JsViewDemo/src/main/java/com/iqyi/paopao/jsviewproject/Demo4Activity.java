@@ -27,6 +27,7 @@ public class Demo4Activity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_demo3);
+        setTitle("列表jsGenerateView");
 
         datas = new ArrayList<>();
         datas.add(

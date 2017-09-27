@@ -16,6 +16,8 @@ public class Demo2Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo2);
+        setTitle("jsGenerateView");
+
 
         final V8 v8 = J2V8Core.getRuntime();
         LinearLayout root =(LinearLayout) findViewById(R.id.layout);
