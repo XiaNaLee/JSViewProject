@@ -24,11 +24,14 @@ public abstract class BaseJsViewObject<T extends View> extends BaseJsObject {
         mContext = context;
         if (view != null) {
             this.view = view;
+            if(this.view.getId() == View.NO_ID){
+                ViewUtil.setId(this.view);
+            }
         } else {
             this.view = getView();
             ViewUtil.setId(this.view);
-            J2V8Core.addViewByViewId(this.view.getId(), this.view);
         }
+        J2V8Core.addViewByViewId(this.view.getId(), this.view);
         mGeneralViewHelper = new GeneralViewHelper(this.view);
     }
 
