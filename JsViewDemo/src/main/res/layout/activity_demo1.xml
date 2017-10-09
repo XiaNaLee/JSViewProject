@@ -27,7 +27,7 @@
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/sd"
             android:text="范冰冰"
-            android:textColor="#ffffff"
+            android:textColor="#FF00FF"
             android:textSize="19dp"
             />
 
@@ -40,7 +40,7 @@
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/sd"
             android:text="粉丝: 70.9万 粉丝: 70.9万"
-            android:textColor="#ffffff"
+            android:textColor="#8B636C"
             android:textSize="14dp"
             />
 

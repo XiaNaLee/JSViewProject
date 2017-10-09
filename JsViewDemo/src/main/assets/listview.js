@@ -15,7 +15,7 @@ relativeLayout.addView(imageView.getViewId())
 
 textView1.setText("范冰冰")
 textView1.setTextSize(19)
-textView1.setTextColor("#FFFFFF")
+textView1.setTextColor("#FF00FF")
 textView1.setRMargin(10,10,0,0)
 textView1.addRuleBySub(RIGHT_OF,imageView.getViewId());
 relativeLayout.addView(textView1.getViewId())
@@ -23,7 +23,7 @@ relativeLayout.addView(textView1.getViewId())
 
 textView2.setText("粉丝: 70.9万 粉丝: 70.9万")
 textView2.setTextSize(14)
-textView2.setTextColor("#FFFFFF")
+textView2.setTextColor("#8B636C")
 textView2.setRMargin(10,10,0,0)
 textView2.addRuleBySub(RIGHT_OF,imageView.getViewId());
 textView2.addRuleBySub(BELOW,textView1.getViewId());

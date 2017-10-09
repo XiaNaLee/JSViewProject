@@ -2,6 +2,7 @@ package com.iqyi.paopao.jsviewproject;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,26 +29,26 @@ public class Demo3Activity extends Activity {
 
 
         datas = new ArrayList<>();
-        datas.add("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=733226887,3131487055&fm=11&gp=0.jpg");
-        datas.add("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2129390034,2297929709&fm=11&gp=0.jpg");
-        datas.add("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=464871635,3825712800&fm=11&gp=0.jpg");
-        datas.add("https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2040801164,951544642&fm=11&gp=0.jpg");
-        datas.add("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=852686279,2090412269&fm=11&gp=0.jpg");
-        datas.add("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1055767145,1482547224&fm=11&gp=0.jpg");
-        datas.add("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=914486193,3483630599&fm=11&gp=0.jpg");
-        datas.add("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4031956454,726072657&fm=200&gp=0.jpg");
-        datas.add("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3379898938,1852859788&fm=11&gp=0.jpg");
-        datas.add("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1293277274,3365578558&fm=11&gp=0.jpg");
-        datas.add("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=733226887,3131487055&fm=11&gp=0.jpg");
-        datas.add("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2129390034,2297929709&fm=11&gp=0.jpg");
-        datas.add("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=464871635,3825712800&fm=11&gp=0.jpg");
-        datas.add("https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2040801164,951544642&fm=11&gp=0.jpg");
-        datas.add("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=852686279,2090412269&fm=11&gp=0.jpg");
-        datas.add("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1055767145,1482547224&fm=11&gp=0.jpg");
-        datas.add("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=914486193,3483630599&fm=11&gp=0.jpg");
-        datas.add("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4031956454,726072657&fm=200&gp=0.jpg");
-        datas.add("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3379898938,1852859788&fm=11&gp=0.jpg");
-        datas.add("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1293277274,3365578558&fm=11&gp=0.jpg");
+        datas.add("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3687352270,1420167656&fm=27&gp=0.jpg");
+        datas.add("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3037530008,1348733218&fm=27&gp=0.jpg");
+        datas.add("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1803912284,1630642523&fm=27&gp=0.jpg");
+        datas.add("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2956344980,2083665809&fm=27&gp=0.jpg");
+        datas.add("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2126593976,2544983032&fm=27&gp=0.jpg");
+        datas.add("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3494374167,3965802318&fm=27&gp=0.jpg");
+        datas.add("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3214293127,1624548564&fm=27&gp=0.jpg");
+        datas.add("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3998983078,1771214757&fm=27&gp=0.jpg");
+        datas.add("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3656258293,215667308&fm=27&gp=0.jpg");
+        datas.add("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2785681579,1798643838&fm=11&gp=0.jpg");
+        datas.add("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=633906328,1828877766&fm=27&gp=0.jpg");
+        datas.add("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3028319274,2765486413&fm=11&gp=0.jpg");
+        datas.add("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2462728309,3100060121&fm=27&gp=0.jpg");
+        datas.add("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2052905881,926545977&fm=27&gp=0.jpg");
+        datas.add("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3301025250,1597782248&fm=27&gp=0.jpg");
+        datas.add("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1398217826,619748703&fm=11&gp=0.jpg");
+        datas.add("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=54669225,1566763439&fm=27&gp=0.jpg");
+        datas.add("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3829776286,95595474&fm=27&gp=0.jpg");
+        datas.add("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2242716576,3793457633&fm=27&gp=0.jpg");
+        datas.add("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=308846034,1574217073&fm=27&gp=0.jpg");
 
 
         ListView listView = (ListView) findViewById(R.id.lv3);
@@ -82,6 +83,8 @@ public class Demo3Activity extends Activity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
+            long startTime = System.currentTimeMillis();
+
             ViewHolder v;
             if (convertView == null) {
                 convertView = ml.inflate(
@@ -99,6 +102,9 @@ public class Demo3Activity extends Activity {
             }
 
             v.sd.setImageURI(datas.get(position));
+
+            long endTime = System.currentTimeMillis();
+            Log.d("Demo3Activity", "duration=" + (endTime - startTime));
             return convertView;
         }
 

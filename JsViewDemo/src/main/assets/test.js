@@ -10,13 +10,13 @@ relativeLayout.setSize(MATCH_PARENT,WRAP_CONTENT)
 
 imageView.setSize(100,100)
 imageView.setRoundedCorners(true)
-imageView.setUrl("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1506319612933&di=ab5bf4792e57c6935beff7e5b7218598&imgtype=0&src=http%3A%2F%2Fimage.tianjimedia.com%2FuploadImages%2F2017%2F011%2F43%2FT2BQI68W995R.jpg")
+imageView.setUrl("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3687352270,1420167656&fm=27&gp=0.jpg")
 relativeLayout.addView(imageView.getViewId())
 
 
 textView1.setText("范冰冰")
 textView1.setTextSize(19)
-textView1.setTextColor("#FFFFFF")
+textView1.setTextColor("#FF00FF")
 textView1.setRMargin(10,10,0,0)
 textView1.addRuleBySub(RIGHT_OF,imageView.getViewId());
 relativeLayout.addView(textView1.getViewId())
@@ -24,7 +24,7 @@ relativeLayout.addView(textView1.getViewId())
 
 textView2.setText("粉丝: 70.9万 粉丝: 70.9万")
 textView2.setTextSize(14)
-textView2.setTextColor("#FFFFFF")
+textView2.setTextColor("#8B636C")
 textView2.setRMargin(10,10,0,0)
 textView2.addRuleBySub(RIGHT_OF,imageView.getViewId());
 textView2.addRuleBySub(BELOW,textView1.getViewId());

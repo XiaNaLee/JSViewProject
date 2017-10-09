@@ -2,6 +2,7 @@ package com.iqyi.paopao.jsviewproject;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.generic.RoundingParams;
@@ -13,6 +14,7 @@ public class Demo1Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        long startTime = System.currentTimeMillis();
         setContentView(R.layout.activity_demo1);
         setTitle("纯粹native view");
 
@@ -26,10 +28,11 @@ public class Demo1Activity extends Activity {
         simpleDraweeView.setHierarchy(genericDraweeHierarchy);
 
         simpleDraweeView.setImageURI(
-                "https://timgsa.baidu"
-                        + ".com/timg?image&quality=80&size=b9999_10000&sec=1506319612933&di"
-                        + "=ab5bf4792e57c6935beff7e5b7218598&imgtype=0&src=http%3A%2F%2Fimage"
-                        + ".tianjimedia.com%2FuploadImages%2F2017%2F011%2F43%2FT2BQI68W995R.jpg");
+                "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3687352270,"
+                        + "1420167656&fm=27&gp=0.jpg");
+
+        long endTime = System.currentTimeMillis();
+        Log.d("Demo1Activity", "duration=" + (endTime - startTime));
     }
 
 
