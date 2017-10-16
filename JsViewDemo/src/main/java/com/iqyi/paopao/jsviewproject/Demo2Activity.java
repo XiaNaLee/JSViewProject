@@ -6,8 +6,8 @@ import android.util.Log;
 import android.widget.LinearLayout;
 
 import com.eclipsesource.v8.V8;
-import com.iqyi.paopao.jsviewsdk.core.J2V8Core;
-import com.iqyi.paopao.jsviewsdk.v8object.WindowJsObj;
+import com.stickers.jsviewsdk.core.J2V8Core;
+import com.stickers.jsviewsdk.v8object.WindowJsObj;
 
 
 public class Demo2Activity extends Activity {

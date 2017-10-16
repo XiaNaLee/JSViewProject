@@ -1,1 +1,1 @@
-include ':JsViewDemo', ':jsViewSdk'
+include ':JsViewDemo', ':Stickers'
