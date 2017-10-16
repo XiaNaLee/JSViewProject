@@ -1,11 +1,11 @@
-package com.iqyi.paopao.jsviewsdk.v8object.base;
+package com.stickers.jsviewsdk.v8object.base;
 
 import com.eclipsesource.v8.V8;
 import com.eclipsesource.v8.V8Object;
 
 /**
  * Created by LiYong on 2017/9/20.
- * Email:liyong@qiyi.com/lee131483@gmail.com
+ * Email:lee131483@gmail.com
  */
 
 public abstract class BaseJsObject {

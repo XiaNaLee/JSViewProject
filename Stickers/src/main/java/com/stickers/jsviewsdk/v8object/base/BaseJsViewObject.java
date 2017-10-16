@@ -1,16 +1,16 @@
-package com.iqyi.paopao.jsviewsdk.v8object.base;
+package com.stickers.jsviewsdk.v8object.base;
 
 import android.content.Context;
 import android.view.View;
 
 import com.eclipsesource.v8.V8;
-import com.iqyi.paopao.jsviewsdk.core.J2V8Core;
-import com.iqyi.paopao.jsviewsdk.util.GeneralViewHelper;
-import com.iqyi.paopao.jsviewsdk.util.ViewUtil;
+import com.stickers.jsviewsdk.core.J2V8Core;
+import com.stickers.jsviewsdk.util.GeneralViewHelper;
+import com.stickers.jsviewsdk.util.ViewUtil;
 
 /**
  * Created by LiYong on 2017/9/20.
- * Email:liyong@qiyi.com/lee131483@gmail.com
+ * Email:lee131483@gmail.com
  */
 
 public abstract class BaseJsViewObject<T extends View> extends BaseJsObject {

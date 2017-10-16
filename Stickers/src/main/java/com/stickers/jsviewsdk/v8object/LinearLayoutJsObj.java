@@ -1,10 +1,9 @@
-package com.iqyi.paopao.jsviewsdk.v8object;
+package com.stickers.jsviewsdk.v8object;
 
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-
 import com.eclipsesource.v8.V8;
-import com.iqyi.paopao.jsviewsdk.core.J2V8Core;
+import com.stickers.jsviewsdk.core.J2V8Core;
 
 /**
  * Created by LiYong on 2017/9/20.

@@ -1,13 +1,15 @@
-package com.iqyi.paopao.jsviewsdk.util;
+package com.stickers.jsviewsdk.util;
 
 import android.content.Context;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+;
+
 /**
  * Created by LiYong on 2017/9/20.
- * Email:liyong@qiyi.com/lee131483@gmail.com
+ * Email:lee131483@gmail.com
  * Version:
  */
 

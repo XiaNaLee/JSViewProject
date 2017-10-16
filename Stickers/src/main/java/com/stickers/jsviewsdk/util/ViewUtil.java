@@ -1,4 +1,5 @@
-package com.iqyi.paopao.jsviewsdk.util;
+package com.stickers.jsviewsdk.util;
+
 
 import android.content.Context;
 import android.os.Build;
@@ -11,7 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Created by LiYong on 2017/9/11.
- * Email:liyong@qiyi.com/lee131483@gmail.com
+ * Email:lee131483@gmail.com
  * Version:
  */
 

@@ -1,11 +1,11 @@
-package com.iqyi.paopao.jsviewsdk.core;
+package com.stickers.jsviewsdk.core;
 
 import android.content.Context;
 import android.view.View;
 
 import com.eclipsesource.v8.V8;
-import com.iqyi.paopao.jsviewsdk.util.FileUtil;
-import com.iqyi.paopao.jsviewsdk.v8object.base.BaseJsObject;
+import com.stickers.jsviewsdk.util.FileUtil;
+import com.stickers.jsviewsdk.v8object.base.BaseJsObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Stack;
 
 /**
  * Created by LiYong on 2017/9/20.
- * Email:liyong@qiyi.com/lee131483@gmail.com
+ * Email:lee131483@gmail.com
  * Version:
  */
 
@@ -35,14 +35,13 @@ public class J2V8Core {
         mViews = new Stack<>();
 
         mRuntime = V8.createV8Runtime();
-        mRuntime.add("MATCH_PARENT",LayoutConstant.MATCH_PARENT);
-        mRuntime.add("WRAP_CONTENT",LayoutConstant.WRAP_CONTENT);
-        mRuntime.add("ALIGN_PARENT_RIGHT",LayoutConstant.ALIGN_PARENT_RIGHT);
-        mRuntime.add("ALIGN_PARENT_LEFT",LayoutConstant.ALIGN_PARENT_LEFT);
-        mRuntime.add("RIGHT_OF",LayoutConstant.RIGHT_OF);
-        mRuntime.add("LEFT_OF",LayoutConstant.LEFT_OF);
-        mRuntime.add("BELOW",LayoutConstant.BELOW);
-
+        mRuntime.add("MATCH_PARENT", LayoutConstant.MATCH_PARENT);
+        mRuntime.add("WRAP_CONTENT", LayoutConstant.WRAP_CONTENT);
+        mRuntime.add("ALIGN_PARENT_RIGHT", LayoutConstant.ALIGN_PARENT_RIGHT);
+        mRuntime.add("ALIGN_PARENT_LEFT", LayoutConstant.ALIGN_PARENT_LEFT);
+        mRuntime.add("RIGHT_OF", LayoutConstant.RIGHT_OF);
+        mRuntime.add("LEFT_OF", LayoutConstant.LEFT_OF);
+        mRuntime.add("BELOW", LayoutConstant.BELOW);
 
         return mRuntime;
     }

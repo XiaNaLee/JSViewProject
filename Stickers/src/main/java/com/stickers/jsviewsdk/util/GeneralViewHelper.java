@@ -1,15 +1,16 @@
-package com.iqyi.paopao.jsviewsdk.util;
+package com.stickers.jsviewsdk.util;
 
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.iqyi.paopao.jsviewsdk.v8object.base.GeneralViewListener;
+import com.stickers.jsviewsdk.v8object.base.GeneralViewListener;
+
 
 /**
  * Created by LiYong on 2017/9/21.
- * Email:liyong@qiyi.com/lee131483@gmail.com
+ * Email:lee131483@gmail.com
  * Version:
  */
 

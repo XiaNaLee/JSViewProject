@@ -1,14 +1,14 @@
-package com.iqyi.paopao.jsviewsdk.v8object;
+package com.stickers.jsviewsdk.v8object;
 
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import com.eclipsesource.v8.V8;
-import com.iqyi.paopao.jsviewsdk.core.J2V8Core;
+import com.stickers.jsviewsdk.core.J2V8Core;
 
 /**
  * Created by LiYong on 2017/9/20.
- * Email:liyong@qiyi.com/lee131483@gmail.com
+ * Email:lee131483@gmail.com
  */
 
 public class RelativeLayoutJsObj extends ViewJsObj<RelativeLayout> {

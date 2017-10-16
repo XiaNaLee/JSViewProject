@@ -1,4 +1,4 @@
-package com.iqyi.paopao.jsviewsdk.v8object;
+package com.stickers.jsviewsdk.v8object;
 
 import android.view.ViewGroup;
 
@@ -9,7 +9,7 @@ import com.facebook.drawee.view.SimpleDraweeView;
 
 /**
  * Created by LiYong on 2017/9/20.
- * Email:liyong@qiyi.com/lee131483@gmail.com
+ * Email:lee131483@gmail.com
  * Version:
  */
 

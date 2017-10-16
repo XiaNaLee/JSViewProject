@@ -1,4 +1,4 @@
-package com.iqyi.paopao.jsviewsdk.v8object;
+package com.stickers.jsviewsdk.v8object;
 
 import android.graphics.Color;
 import android.view.View;
@@ -9,14 +9,14 @@ import com.eclipsesource.v8.V8;
 import com.eclipsesource.v8.V8Array;
 import com.eclipsesource.v8.V8Function;
 import com.eclipsesource.v8.V8Object;
-import com.iqyi.paopao.jsviewsdk.core.J2V8Core;
-import com.iqyi.paopao.jsviewsdk.v8object.base.BaseJsViewObject;
-import com.iqyi.paopao.jsviewsdk.v8object.base.GeneralViewListener;
+import com.stickers.jsviewsdk.core.J2V8Core;
+import com.stickers.jsviewsdk.v8object.base.BaseJsViewObject;
+import com.stickers.jsviewsdk.v8object.base.GeneralViewListener;
+
 
 /**
  * Created by LiYong on 2017/9/21.
- * Email:liyong@qiyi.com/lee131483@gmail.com
- * Version:
+ * Email:lee131483@gmail.com
  */
 
 public abstract class ViewJsObj<U extends View> extends BaseJsViewObject<U> implements

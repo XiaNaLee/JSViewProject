@@ -1,4 +1,5 @@
-package com.iqyi.paopao.jsviewsdk.v8object;
+package com.stickers.jsviewsdk.v8object;
+
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -6,17 +7,19 @@ import android.widget.LinearLayout;
 
 import com.eclipsesource.v8.V8;
 import com.eclipsesource.v8.V8Object;
-import com.iqyi.paopao.jsviewsdk.v8object.base.BaseJsObject;
-import com.iqyi.paopao.jsviewsdk.v8object.base.BaseJsViewObject;
+import com.stickers.jsviewsdk.v8object.base.BaseJsObject;
+import com.stickers.jsviewsdk.v8object.base.BaseJsViewObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+;
+
 /**
  * Created by LiYong on 2017/9/20.
- * Email:liyong@qiyi.com/lee131483@gmail.com
+ * Email:lee131483@gmail.com
  */
 
 public class WindowJsObj extends BaseJsObject {

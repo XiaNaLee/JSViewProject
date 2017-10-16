@@ -1,8 +1,9 @@
-package com.iqyi.paopao.jsviewsdk.v8object.base;
+package com.stickers.jsviewsdk.v8object.base;
+
 
 /**
  * Created by LiYong on 2017/9/21.
- * Email:liyong@qiyi.com/lee131483@gmail.com
+ * Email:lee131483@gmail.com
  * Version:
  */
 
