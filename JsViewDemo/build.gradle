@@ -28,6 +28,11 @@ android {
 //        }
 //    }
 }
+repositories {
+    flatDir {
+        dirs '../Stickers/libs';
+    }
+}
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
